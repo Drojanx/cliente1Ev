@@ -5,7 +5,7 @@
     <meta name="viewport">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Add - Site editor</title>
+    <title>Edit - Site editor</title>
     <link rel="stylesheet" href="css/site.css"/>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
@@ -35,7 +35,7 @@
             <div class="mb-3">
                 <label for="siteCategroy" class="form-label">Site Category</label>
                 <select class="form-select" aria-label="Default select example" id="siteCategory">
-                    <option value="Select category" selected>Select category</option>
+                    <option selected>Select category</option>
                 </select>
             </div>
 
@@ -44,13 +44,13 @@
                 <textarea class="form-control" id="siteDescription" rows="3"></textarea>
             </div>
             <div id="buttons" class="m-auto w-50 d-flex justify-content-around">
-                <button onclick="addSite();" type="button" class="btn btn-primary btn-lg">Save</button>
+                <button onclick="modifySite();" type="button" class="btn btn-primary btn-lg">Save</button>
                 <a type="button" class="btn btn-danger btn-lg" href="index.html">Cancel</a>
             </div>
         </div>
     </div>
 
-    <script src="js/site.js"></script>
+    <script src="js/edit-site.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
 </body>
 </html>
