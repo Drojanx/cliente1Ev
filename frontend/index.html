@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password Saver</title>
+    <link rel="stylesheet" href="css/index.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+</head>
+<body>
+    <div class="container">
+        <div class="btn-group mt-5 " role="group">
+        <button type="button" class="btn btn-outline-primary" id="addCategory">Add Category</button>
+        <a type="button" class="btn btn-outline-primary" id="addSite" href="site.html">Add Site</a>
+        </div>
+
+        <div class="mb-3 w-25 text-center mt-3 bg-primary bg-gradient d-none rounded" id="categoryForm">
+            <label for="categoryName" class="form-label text-white my-3">Name</label>
+            <input type="text" class="form-control w-75 m-auto" id="categoryName" placeholder="My new category">
+            <button onclick="addCategory();" class="btn btn-light btn-sm my-3">Add</button>
+        </div>
+    </div>
+    <div class="container d-flex justify-content-between mt-4">
+        <div class="w-25">
+            <table id="categoryList" class="table table-bordered table-striped table-hover">
+                <thead>
+                    <tr>
+                        <th class="fs-4 text-center">Categories</th>
+                    </tr>
+                </thead>
+                <tbody>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="w-75">
+            <table id="siteList" class="table table-bordered table-striped ms-5 text-center table-hover">
+                <thead>
+                    <tr>
+                        <th>Site</th>
+                        <th>User</th>
+                        <th>Created at</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                </tbody>
+            </table>
+        </div>
+
+    </div>
+
+    <script src="js/index.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+</body>
+</html>
