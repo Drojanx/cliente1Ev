@@ -1,0 +1,11 @@
+#categoryForm {
+    transition: all .5s;
+}
+
+#categoryList a:hover{
+    cursor: pointer;
+}
+
+#siteList .bi:hover {
+    cursor: pointer;
+}
