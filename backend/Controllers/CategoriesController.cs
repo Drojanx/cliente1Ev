@@ -34,6 +34,12 @@ namespace backend.Controllers
         [HttpPost]
         public ActionResult Post(Category category)
         {
+            foreach(Category cat in _context.Categories) {
+                if (cat.Name.Equals(category.Name)) {
+                    return Conflict("This Name is already being used.");
+                }
+            }
+            
             var existingCategory = _context.Categories.Find(category.Id);
             if (existingCategory!=null) {
                 return Conflict("This Id is already being used.");

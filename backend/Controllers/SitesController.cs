@@ -28,7 +28,7 @@ namespace backend.Controllers
         public ActionResult<IEnumerable<Site>> Get(int siteId)
         {
             Site site = _context.Sites.Find(siteId);
-            return site == null ? NotFound("Product not found") : Ok(site);
+            return site == null ? NotFound("Site not found") : Ok(site);
         }
 
         [HttpPost]
@@ -42,6 +42,7 @@ namespace backend.Controllers
                 if (existingCategory==null) {
                     return Conflict("This category doesn't exist");
                 } else {
+                    site.CreationDate = DateTime.UtcNow.ToString("MM-dd-yyyy");
                     _context.Sites.Add(site);
                     _context.SaveChanges();
                     var resourceUrl = Request.Path.ToString() + "/" + site.Id;
