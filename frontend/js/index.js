@@ -3,7 +3,7 @@ var sites = [];
 var filteredSites = [];
 
 function getCategories(){
-  fetch('https://localhost:3022/categories')
+  fetch('https://passsaverapi-alanz.azurewebsites.net/categories')
   .then(response => response.json())
   .then(response => {
     categories = response;
@@ -14,7 +14,7 @@ function getCategories(){
 }
 
 function getSites(){
-  fetch('https://localhost:3022/sites')
+  fetch('https://passsaverapi-alanz.azurewebsites.net/sites')
   .then(response => response.json())
   .then(response => {
     sites = response;
@@ -131,7 +131,7 @@ function addCategory() {
   if (catExists) {
     alert("There is another category with that name. Use a different one.")
   } else {
-    fetch('https://localhost:3022/categories', {
+    fetch('https://passsaverapi-alanz.azurewebsites.net/categories', {
       method: 'POST',
       headers: {
         'Content-type': 'application/json'
@@ -152,7 +152,7 @@ function addCategory() {
 
 function deleteCategory(categoryToDelete) {
   let categoryId = categories.find(category => category.name === categoryToDelete).id;
-  fetch(`https://localhost:3022/categories/${categoryId}`, {
+  fetch(`https://passsaverapi-alanz.azurewebsites.net/categories/${categoryId}`, {
     method: 'DELETE'
   })
     .then(() => {
@@ -171,7 +171,7 @@ function deleteCategory(categoryToDelete) {
 
 function deleteSite(siteToDelete, userSite) {
   let siteId = sites.find(site => site.name === siteToDelete && site.username === userSite).id;
-  fetch(`https://localhost:3022/sites/${siteId}`, {
+  fetch(`https://passsaverapi-alanz.azurewebsites.net/sites/${siteId}`, {
     method: 'DELETE'
   })
     .then(() => {

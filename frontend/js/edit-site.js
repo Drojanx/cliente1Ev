@@ -21,7 +21,7 @@ window.onload = function () {
 
 function getSite(){
 
-    fetch(`https://localhost:3022/sites/${siteId}`)
+    fetch(`http://passsaverapi-alanz.azurewebsites.net/sites/${siteId}`)
     .then(response => response.json())
     .then(response => {
         siteToModify = response;
@@ -37,7 +37,7 @@ function getSite(){
 }
 
 function getCategories(){
-    fetch('https://localhost:3022/categories')
+    fetch('http://passsaverapi-alanz.azurewebsites.net/categories')
     .then(response => response.json())
     .then(response => {
       categories = response;
@@ -47,7 +47,7 @@ function getCategories(){
 }
 
 function getSites(){
-fetch('https://localhost:3022/sites')
+fetch('http://passsaverapi-alanz.azurewebsites.net/sites')
     .then(response => response.json())
     .then(response => {
         sites = response;
@@ -89,7 +89,7 @@ function modifySite() {
     if (siteExists) {
       alert("This username is already registered for this URL")
     } else {
-      fetch(`https://localhost:3022/sites/${siteId}`, {
+      fetch(`http://passsaverapi-alanz.azurewebsites.net/sites/${siteId}`, {
         method: 'PUT',
         headers: {
           'Content-type': 'application/json'
