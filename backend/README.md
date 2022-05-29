@@ -28,4 +28,4 @@ Además, al lanzarse la API, se genera un Openapi 3 en la url https://localhost:
 
 Por otro lado, indicar que se ha configurado la API para conectar con la base de datos desplegada en azure en este servidor: alanzserver.database.windows.net
 
-Última actualización: se desplegó esta misma API en Azure con la siguiente URL: https://alanzpasssasver.azurewebsites.net/
+Última actualización: se desplegó esta misma API en Azure con la siguiente URL: http://passsaverapi-alanz.azurewebsites.net
