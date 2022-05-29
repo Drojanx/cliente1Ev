@@ -26,4 +26,6 @@ La URL a la que habrá mandar las peticiones CRUD es: https://localhost:3022
 
 Además, al lanzarse la API, se genera un Openapi 3 en la url https://localhost:3022/swagger/index.html
 
-Por otro lado, indicar que se ha configurado la API para conectar con la base de datos desplegada en azure en este servidro: alanzserver.database.windows.net
+Por otro lado, indicar que se ha configurado la API para conectar con la base de datos desplegada en azure en este servidor: alanzserver.database.windows.net
+
+Última actualización: se desplegó esta misma API en Azure con la siguiente URL: https://alanzpasssasver.azurewebsites.net/
